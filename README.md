@@ -1,2 +1,4 @@
 # BrewBucks Coffee
  Brewbucks Coffee webpage, based on everyone's favourite pigeon barista
+
+Animal Crossing and Nintendo are registered trademarks of Nintendo, i do NOT claim to own them.
