@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#06503a" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#06503a" media="(prefers-color-scheme: dark)">
+    <meta name="description" content="Brewster the Rooster, serving the best coffee around">
+    <title>BrewBucks - Serving The Best Coffee Since 2005</title>
+    <link rel="icon" href="./favicon.svg">
+    <link defer rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="./script.js"></script>
+</head>
+<body>
+    <!--Nav Start-->
+    <section aria-label="Signup and Login">
+        <nav>
+            <div class="links">
+                <ul>
+                    <li><a>signup</a></li>
+                    <li><a>login</a></li>
+                </ul>
+            </div>
+        </nav>
+    </section>
+    <!--Nav End-->
+    <main>
+        <!--Logo Start-->
+        <section aria-label="Main Page Logo and Title">
+            <div class="logo container">
+                <header>
+                    <div class="logo">
+                        <img width="630px" height="630px" draggable="false" src="./img/logo.webp" alt="logo">
+                    </div>
+                    <h2>
+                        serving the best coffee around since 2005
+                    </h2>
+                </header>
+            </div>
+        </section>
+        <!--Logo End-->
+
+        <!--Opening Times Start-->
+        <section aria-label="Cafe's Opening Times">
+            <div class="opening-times container">
+                <div class="wrapper reveal">
+                    <header>
+                        <h2>
+                            opening times
+                        </h2>
+                    </header>
+                    <div class="content">
+                        <table>
+                            <tr><th>monday</th><td>9:00am - 5:30pm</td></tr>
+                            <tr><th>tuesday</th><td>9:00am - 5:30pm</td></tr>
+                            <tr><th>wednesday</th><td>9:00am - 5:30pm</td></tr>
+                            <tr><th>thursday</th><td>9:00am - 8:00pm</td></tr>
+                            <tr><th>friday</th><td>9:00am - 8:00pm</td></tr>
+                            <tr><th>saturday</th><td class="closed">closed</td></tr>
+                            <tr><th>sunday</th><td class="closed">closed</td></tr>
+                        </table>
+                        <p>
+                            * Reservations can be booked up to one month in advance, bookings can be cancelled up to <u>two days</u> prior to your booked reservation
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--Opening Times End-->
+
+        <!--Menu Start-->
+        <section aria-label="List of items on the menu">
+            <div class="menu container">
+                <div class="wrapper reveal">
+                    <header>
+                        <h2>
+                            menu items
+                        </h2>
+                    </header>
+                    <div class="menu-contents">
+                        <div class="menu-item">
+                            <img width="256px" height="256px" draggable="false" src="./img/brewster-cookie.webp" alt="sablé cookie">
+                            <h3>
+                                sablé cookie
+                            </h3>
+                            <p>
+                                A superbly delicious cookie made entirely from flour & sugar, gooey on the inside and crunchy on the outside, baked to absolute perfection, a perfect companion to dunk in your coffee, what more could you ask for!
+                            </p>
+                        </div>
+                        <div class="menu-item">
+                            <img height="256px" width="256px" draggable="false" src="./img/brewster-coffee.webp" alt="cartoony pigeon barista serving coffee">
+                            <h3>
+                                brewster's finest coffee
+                            </h3>
+                            <p>
+                                Serving up a delicious cup of fresh coffee, brewed to perfection using a variety methods to bring out its fullest flavour and sweet aromatic tones, can also be served with fresh pigeon milk per customer request
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--Menu End-->
+
+        <!--Entertainment Start-->
+        <section aria-label="Entertainer at the Cafe">
+            <div class="entertainment container">
+                <div class="wrapper reveal">
+                    <header>
+                        <h2>
+                            entertainment
+                        </h2>
+                    </header>
+                    <div class="entertainment-contents">
+                        <img width="300px" height="300px" draggable="false" src="./img/kk-slider.webp" alt="cartoony dog playing guitar">
+                        <h3>
+                            k.k Slider
+                        </h3>
+                        <p>
+                            We have the world renown K.K Slider playing at our venues on Thursday & Friday evenings every week, come and listen to some of your favourite music, while enjoying a delicious cookie with a aromatic coffee blend, what a perfect way to spend the evenings - as an added bonus, you can request your favourite melody to be played live!
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--Entertainment End-->
+
+        <!--Gallery Start-->
+        <section aria-label="Photo Gallery">
+            <div class="gallery container">
+                <div class="wrapper reveal">
+                    <header>
+                        <h2>
+                            gallery
+                        </h2>
+                    </header>
+                    <div class="carousel" data-carousel>
+                        <button aria-label="Previous Image" class="carousel-button prev"><i class="fa-solid fa-arrow-left" data-carousel-button="prev"></i></button>
+                        <button aria-label="Next Image" class="carousel-button next"><i class="fa-solid fa-arrow-right" data-carousel-button="next"></i></button>
+                        <ul data-slides>
+                            <li class="slide" data-active>
+                                <figure>
+                                    <img width="1280px" height="720px" draggable="false" src="./img/gallery-1.webp" alt="cafe interior #1">
+                                    <figcaption>
+                                        <a target="_blank" href="https://screenrant.com/animal-crossing-new-horizons-isabelle-carpet/">credit: screenRant</a>
+                                    </figcaption>
+                                </figure>
+                            </li>
+                            <li class="slide">
+                                <figure>
+                                    <img width="1280px" height="720px" draggable="false" src="./img/gallery-2.webp" alt="cafe interior #2">
+                                    <figcaption>
+                                        <a target="_blank" href="https://www.reddit.com/r/AnimalCrossing/comments/qnsuha/brewster_serves_water_if_you_and_a_friend_both/">credit: reddit</a>
+                                    </figcaption>
+                                </figure>
+                            </li>
+                            <li class="slide">
+                                <figure>
+                                    <img width="1280px" height="720px" draggable="false" src="./img/gallery-3.webp" alt="cafe interior #3">
+                                    <figcaption>
+                                        <a target="_blank" href="https://www.gamesradar.com/opening-brewsters-cafe-in-animal-crossing-new-horizons-made-my-island-feel-complete/">credit: gamesRadar +</a>
+                                    </figcaption>
+                                </figure>
+                            </li>
+                            <li class="slide">
+                                <figure>
+                                    <img width="1280px" height="720px" draggable="false" src="./img/gallery-4.webp" alt="cafe interior #4">
+                                    <figcaption>
+                                        <a target="_blank" href="https://www.gameinformer.com/2021/10/15/brewsters-coffee-shop-returns-to-animal-crossing-new-horizons-alongside-older-features">credit: gameInformer</a>
+                                    </figcaption>
+                                </figure>
+                            </li>
+                            <li class="slide">
+                                <figure>
+                                    <img width="1280px" height="720px" draggable="false" src="./img/gallery-5.webp" alt="cafe interior #5">
+                                    <figcaption>
+                                        <a target="_blank" href="https://www.reddit.com/r/AnimalCrossing/comments/qzznhd/invited_kappn_for_coffee_and_his_wife_daughter/">credit: reddit</a>
+                                    </figcaption>
+                                </figure>
+                            </li>
+                            <li class="slide">
+                                <figure>
+                                    <img width="1280px" height="720px" draggable="false" src="./img/gallery-6.webp" alt="cafe interior #6">
+                                    <figcaption>
+                                        <a target="_blank" href="https://www.reddit.com/r/AnimalCrossing/comments/qnfde4/first_order_of_business_at_the_roost_gave/">credit: reddit</a>
+                                    </figcaption>
+                                </figure>
+                            </li>
+                            <li class="slide">
+                                <figure>
+                                    <img width="1280px" height="720px" draggable="false" src="./img/gallery-7.webp" alt="cafe interior #7">
+                                    <figcaption>
+                                        <a target="_blank" href="https://www.reddit.com/r/AnimalCrossing/comments/qmr2hx/you_can_meet_wardell_and_niko_early_at_the_roost/">credit: reddit</a>
+                                    </figcaption>
+                                </figure>
+                            </li>
+                            <li class="slide">
+                                <figure>
+                                    <img width="1280px" height="720px" draggable="false" src="./img/gallery-8.webp" alt="cafe interior #8">
+                                    <figcaption>
+                                        <a target="_blank" href="https://www.reddit.com/r/AnimalCrossing/comments/tjd1cs/i_didnt_expect_them_to_have_such_high_singing/">credit: reddit</a>
+                                    </figcaption>
+                                </figure>
+                            </li>
+                            <li class="slide">
+                                <figure>
+                                    <img width="1280px" height="720px" draggable="false" src="./img/gallery-9.webp" alt="cafe interior #9">
+                                    <figcaption>
+                                        <a target="_blank" href="https://www.reddit.com/r/AnimalCrossing/comments/q8nxr7/megathread_animal_crossing_new_horizons_direct/">credit: reddit</a>
+                                    </figcaption>
+                                </figure>
+                            </li>
+                            <li class="slide">
+                                <figure>
+                                    <img width="1280px" height="720px" draggable="false" src="./img/gallery-10.webp" alt="cafe interior #10">
+                                    <figcaption>
+                                        <a target="_blank" href="https://www.nintendolife.com/features/poll-are-you-enjoying-animal-crossing-new-horizons-version-2-0">credit: nintendoLife</a>
+                                    </figcaption>
+                                </figure>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--Gallery End-->
+
+        <!--Staff Start-->
+        <section aria-label="members of staff">
+            <div class="staff container">
+                <div class="wrapper reveal">
+                    <header>
+                        <h2>
+                            staff members
+                        </h2>
+                    </header>
+                    <div class="staff-contents">
+                        <div class="staff-1">
+                            <img width="256px" height="256px" draggable="false" src="./img/puddles.webp" alt="cartoony pink frog">
+                            <h3>
+                                puddles
+                            </h3>
+                            <p>
+                                I am super peppy, my dream is to one day be a world renown popstar! i am what you might call Tre Chique , not only am i fabulous but i'm also a fab trendsetter  
+                            </p>
+                        </div>
+                        <div class="staff-2">
+                            <img width="256px" height="256px" draggable="false" src="./img/coco.webp" alt="cartoony gyroid rabbit">
+                            <h3>
+                                coco
+                            </h3>
+                            <p>
+                                People think that i look kind of creepy, i don't let it bother me, i'm just a loveable rabbit that loves nothing more than a good book with some coffee
+                            </p>
+                        </div>
+                        <div class="staff-3">
+                            <img width="256px" height="256px" draggable="false" src="./img/melba.webp" alt="cartoony koala">
+                            <h3>
+                                melba
+                            </h3>
+                            <p>
+                                Hey everyone, i'm melba from Melbourne, i can be a little shy.. but once you get to know me you can't get me to stop talking, especially after some delicous coffee
+                            </p>
+                        </div>
+                        <div class="staff-4">
+                            <img width="256px" height="256px" draggable="false" src="./img/julian.webp" alt= "cartoony blue unicorn">
+                            <h3>
+                                julian
+                            </h3>
+                            <p>
+                                I am free spirited & wild at heart. I <b>LOVE</b> anything and everything fashion, always keeping up with the latest trends when not checking my horoscope of course
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--Staff End-->
+
+        <!--Footer Start-->
+        <footer>
+            <div class="company contents">
+                <header>
+                    <h4>
+                        company
+                    </h4>
+                </header>
+                <ul>
+                    <li>careers</li>
+                    <li>about</li>
+                    <li>services</li>
+                    <li>privacy policy</li>
+                    <li>contact</li>
+                </ul>
+            </div>
+            <div class="social contents">
+                <header>
+                    <h4>
+                        social
+                    </h4>
+                </header>
+                <ul>
+                    <li>facebook</li>
+                    <li>instagram</li>
+                    <li>twitter</li>
+                    <li>pinterest</li>
+                </ul>
+            </div>
+            <div class="links contents">
+                <header>
+                    <h4>
+                        useful links
+                    </h4>
+                </header>
+                <ul>
+                    <li>your account</li>
+                    <li>brewbucks card</li>
+                    <li>enquiries</li>
+                </ul>
+            </div>
+            <div class="contact contents">
+                <header>
+                    <h4>
+                        contact
+                    </h4>
+                </header>
+                <ul>
+                    <li>0800-555137</li>
+                </ul>
+            </div>
+        </footer>
+        <!--Footer End-->
+    </main>
+</body>
+</html>
