@@ -275,16 +275,7 @@ nav ul li a:hover:after {
 }
 .carousel button.next {
     right: 5rem;
-}
-.carousel button:hover,
-.carousel button:focus-visible {
-    opacity: 100%;
-    outline: var(--highlight) 2px solid;
-    padding: .5rem;
-}
-.carousel button:focus:not(:focus-visible)  {
-    outline: none;
-}
+} 
 .slide {
     inset: 0;
     position: absolute;
