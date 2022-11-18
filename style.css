@@ -6,7 +6,7 @@
 }
 :root {
     --primary: #077c59;
-    --scrollbar: #11b886;
+    --scrollbar: #164537;
     --highlight: #6b482c;
     --font: #faf9f6;
     --footer: #086448;
@@ -36,7 +36,13 @@ html::-webkit-scrollbar-thumb {
 }
 /*Scrollbar End*/
 
-/*Page-Wide Start*/
+/*Site-Wide Start*/
+body {
+    width: 100%;
+    min-height: 100vh;
+    background-color: var(--primary);
+    cursor: default;
+}
 .wrapper {
     height: 100%;
 }
@@ -53,26 +59,29 @@ img {
     max-width: 100%;
     object-fit: contain;
 }
-.container {
-    background: var(--primary);
-}
 .container header {
+    height: auto;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     font-family: 'Enriqueta', sans-serif;
-    font-size: 1.5rem;
+    font-size: clamp(1.2rem, 4vw, 1.5rem);
     text-transform: capitalize;
     letter-spacing: 1px;
     color: var(--font);
 }
-/*Page-Wide End*/
+.entertainment header,
+.staff header {
+    margin: 35px auto;
+}
+/*Site-Wide End*/
 
 /*ALT Tag Styling Start*/
 img {
     font-family: 'Poppins', sans-serif;
-    font-size: 1.1rem;
+    font-size: clamp(.95rem, 4vw, 1.1rem);
     text-align: center;
     color: var(--font);
     text-transform: capitalize;
@@ -92,19 +101,13 @@ img {
 }
 /*Page Transition End*/
 
-body {
-    width: 100%;
-    min-height: 100vh;
-    background: var(--bg-light);
-    cursor: default;
-}
 /*Nav Start*/
 nav ul {
     display: flex;
     align-items: center;
     justify-content: center;
     font-family: 'Enriqueta', sans-serif;
-    font-size: 1.1rem;
+    font-size: clamp(.95rem, 4vw, 1.1rem);
     position: absolute;
     right: 0;
 }
@@ -143,14 +146,12 @@ nav ul li a:hover:after {
     align-items: center;
     position: relative;
     bottom: 3.4rem;
+    height: 20vh;
     opacity: 90%;
 }
 /*Logo Section End*/
 
 /*Opening Times Section Start*/
-.opening-times.container {
-    height: 90vh;
-}
 .opening-times.container .content {
     display: flex;
     align-items: center;
@@ -158,7 +159,6 @@ nav ul li a:hover:after {
     flex-direction: column;
     color: var(--font);
     text-transform: capitalize;
-    margin-top: .5rem;
 }
 .content table {
     font-family: 'Poppins', sans-serif;
@@ -170,7 +170,7 @@ nav ul li a:hover:after {
 }
 .content th,
 .content td {
-    font-size: 1.055rem;
+    font-size: clamp(.9rem, 4vw, 1.055rem);
     text-align: left;
     letter-spacing: 1.5px;
     opacity: 85%;
@@ -178,36 +178,32 @@ nav ul li a:hover:after {
 .content p {
     margin: 25px auto;
     font-family: 'Poppins', sans-serif;
-    font-size: .8rem;
+    font-size: clamp(.7rem, 4vw, .8rem);
     letter-spacing: .75px;
     opacity: 85%;
 }
 /*Opening Times Section End*/
 
 /*Menu Section Start*/
-.menu.container {
-    height: 80vh;
-}
 .menu-contents {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 1rem;
     text-align: center;
     color: var(--font);
-    margin: 50px auto;
 }
 .menu-contents .menu-item h3 {
     color: var(--font);
     opacity: 85%;
     font-family: 'Enriqueta', sans-serif;
     line-height: 1.8;
-    font-size: 1.75rem;
+    font-size: clamp(1.25rem, 4vw, 1.75rem);
     letter-spacing: .25px;
     text-transform: capitalize;
 }
 .menu-contents .menu-item p {
     font-family: 'Poppins', sans-serif;
-    font-size: .9rem;
+    font-size: clamp(.8rem, 4vw, .9rem);
     letter-spacing: .75px;
     margin: 0 auto;
     width: 95%;
@@ -216,16 +212,12 @@ nav ul li a:hover:after {
 /*Menu Section End*/
 
 /*Entertainment Section Start*/
-.entertainment.container {
-    height: 85vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    text-align: center;
-}
 .entertainment-contents img{
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
     margin-top: 1.5rem;
 }
 .entertainment-contents h3 {
@@ -233,95 +225,34 @@ nav ul li a:hover:after {
     opacity: 85%;
     font-family: 'Enriqueta', sans-serif;
     line-height: 1.8;
-    font-size: 2rem;
+    font-size: clamp(1.5rem, 4vw, 2rem);
     letter-spacing: .25px;
+    text-align: center;
 }
 .entertainment-contents p {
     font-family: 'Poppins', sans-serif;
     color: var(--font);
-    font-size: .9rem;
+    font-size: clamp(.8rem, 4vw, .9rem);
     margin: 0 auto;
     width: 95%;
     letter-spacing: .75px;
     opacity: 85%;
+    text-align: center;
 }
 /*Entertainment Section End*/
 
-/*Gallery Section Start*/
-.gallery.container {
-    height: 110vh;
-}
-.carousel {
-    height: 100vh;
-    width: 100%;
-    position: relative;
-    top: 2rem;
-}
-.carousel button {
-    position: absolute;
-    font-size: 2.5rem;
-    background: none;
-    border: none;
-    color: var(--font);
-    opacity: 80%;
-    transform: translateY(-50%);
-    top: 45%;
-    cursor: pointer;
-    transition: 250ms ease all;
-    z-index: 2;
-}
-.carousel button.prev {
-    left: 5rem;
-}
-.carousel button.next {
-    right: 5rem;
-} 
-.slide {
-    inset: 0;
-    position: absolute;
-    opacity: 0;
-}
-.slide[data-active] {
-    opacity: 1;
-}
-.slide img {
-    display: block;
-    object-fit: cover;
-    object-position: center;
-    height: 75%;
-    width: 75%;
-    margin: 0 auto;
-}
-.slide figure {
-    position: relative;
-}
-.slide figcaption {
-    position: absolute;
-    bottom: 0;
-    left: 13%;
-    text-transform: capitalize;
-    font-family: 'Poppins', sans-serif;
-    font-size: .8rem;
-    letter-spacing: .5px;
-    color: var(--font);
-    opacity: 75%;
-    z-index: 5;
-}
-/*Gallery Section End*/
-
 /*Staff Section Start*/
-.staff.container {
-    height: 125vh;
-}
 .staff.container .staff-contents {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    grid-gap: 1.5rem;
+    grid-gap: 1rem;
     font-family: 'Poppins', sans-serif;
     text-align: center;
     line-height: 1.5;
-    width: 100%;
+}
+.staff-contents img {
+    width: 30%;
+    height: auto;
 }
 .staff-contents h3,
 .staff-contents p {
@@ -330,20 +261,23 @@ nav ul li a:hover:after {
     letter-spacing: .75px;
 }
 .staff-contents h3 {
-    font-size: .95rem;
+    font-size: clamp(.95rem, 4vw, 1.025rem);
+    letter-spacing: 1.3px;
     opacity: 85%;
 }
 .staff-contents p {
     margin: 0 auto;
-    font-size: .85rem;
+    font-size: clamp(.75rem, 4vw, .85rem);
     width: 95%;
     opacity: 85%;
+    margin: 0 0 2.5rem 0;
 }
 /*Staff Section End*/
 
 /*Footer Start*/
 footer {
-    height: 20vh;
+    height: auto;
+    width: 100%;
     background-color: var(--footer);
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -353,7 +287,7 @@ footer {
     text-transform: capitalize;
 }
 footer .contents {
-    margin: 0 auto;
+    margin: 15px auto;
 }
 footer header,
 footer ul li {
@@ -361,7 +295,7 @@ footer ul li {
 }
 footer header {
     font-family: 'Enriqueta', sans-serif;
-    font-size: .9rem;
+    font-size: clamp(.8rem, 4vw, .9rem);
     line-height: 1.5;
     letter-spacing: .5px;
     opacity: 90%;
@@ -369,16 +303,20 @@ footer header {
 footer ul li {
     line-height: 1.3;
     letter-spacing: .75px;
-    font-size: .85rem;
+    font-size: clamp(.75rem, 4vw, .85rem);
     opacity: 85%;
 }
 /*Footer End*/
 
-/*Media Query's Portrait Start*/
-@media screen and (max-width: 767px) and (orientation: portrait) {
-    nav ul {
-        font-size: .95rem;
+/*Media Query's Start*/
+@media screen and (max-width: 280px) {
+    .menu-contents img,
+    .entertainment-contents img {
+        height: auto;
+        width: 60%;
     }
+}
+@media screen and (max-width: 1024px) {
     .logo.container {
         display: flex;
         justify-content: center;
@@ -388,395 +326,40 @@ footer ul li {
     .logo.container h2 {
         display: none;
     }
-    .opening-times.container {
-        height: 35.5rem;
-    }
-    .content th,
-    .content td {
-        font-size: .85rem;
-    }
     .content p {
         width: 95%;
         text-align: center;
-        font-size: .7rem;
-    }
-    .menu.container {
-        height: 58rem;
     }
     .menu-contents {
         grid-template-columns: 1fr;
-        grid-gap: 1.5rem;
+        grid-gap: 3.5rem;
         margin: 0 auto;
     }
-    .menu-contents .menu-item h3 {
-        font-size: 1.35rem;
-    }
     .menu-contents .menu-item p {
-        font-size: .85rem;
         width: 90%;
-    }
-    .entertainment.container {
-        height: 39rem;
-    }
-    .entertainment-contents h3 {
-        font-size: 1.5rem;
-    }
-    .entertainment-contents p {
-        font-size: .85rem;
-    }
-    .gallery.container {
-        height: 20rem;
-    }
-    .carousel {
-        height: 100%;
-        width: 100%;
-        position: relative;
-        top: 2rem;
-    }
-    .carousel button {
-        font-size: 2rem;
-        top: 35%;
-    }
-    .carousel button.prev {
-        left: 1.75rem;
-    }
-    .carousel button.next {
-        right: 1.75rem;
-    }
-    .slide img {
-        object-fit: contain;
-        height: 100%;
-        width: 90%;
-    }
-    .slide figcaption {
-        left: 6.5%;
-    }
-    .staff.container {
-        height: 100rem;
     }
     .staff.container .staff-contents {
         grid-template-columns: 1fr;
-        grid-template-rows: 1fr;
         grid-gap: 1rem;
     }
-    .staff-contents img {
-        width: 50%;
-    }
     .staff-contents p {
-        width: 95%;
+        margin: 0 auto;
+        margin-bottom: 1rem;
+        width: 80%;
     }
     footer {
-        height: 15rem;
         grid-template-columns: repeat(2, 1fr);
     }
     footer .contents {
         margin-left: 30%;
     }
     footer .contents ul li {
-        line-height: 1.7;
+        line-height: 1.6;
     }
 }
-@media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
-    nav ul {
-        font-size: 1.1rem;
-    }
-    .logo.container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-    }
-    .logo.container h2 {
-        display: none;
-    }
-    .opening-times.container {
-        height: 35.5rem;
-    }
-    .opening-times p {
-        text-align: center;
-        width: 95%;
-        font-size: .85rem;
-    }
-    .menu.container {
-        height: 52rem;
-    }
-    .menu-contents {
-        grid-template-columns: 1fr;
-        grid-gap: 1.5rem;
-        margin: 0 auto;
-    }
-    .menu-contents .menu-item h3 {
-        font-size: 1.35rem;
-    }
-    .menu-contents .menu-item p {
-        font-size: .9rem;
-        width: 90%;
-    }
-    .entertainment.container {
-        height: 34rem;
-    }
-    .entertainment-contents h3 {
-        font-size: 1.5rem;
-    }
-    .entertainment-contents p {
-        font-size: .9rem;
-    }
-    .gallery.container {
-        height: 33rem;
-    }
-    .carousel {
-        height: 100%;
-        width: 100%;
-        position: relative;
-        margin: 0 auto;
-        top: 2rem;
-    }
-    .carousel button {
-        font-size: 2.5rem;
-        top: 40%;
-    }
-    .carousel button.prev {
-        left: 3.2rem;
-    }
-    .carousel button.next {
-        right: 3.2rem;
-    }
-    .slide figcaption {
-        left: 5.5%;
-    }
-    .slide img {
-        object-fit: contain;
-        height: 100%;
-        width: 90%;
-    }
-    .staff.container {
-        height: 98rem;
-    }
-    .staff.container .staff-contents {
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr;
-        grid-gap: 1rem;
-    }
-    .staff-contents img {
-        margin-top: 2rem;
-        width: 50%;
-    }
-    .staff-contents p {
-        width: 95%;
-    }
-    footer {
-        height: 10rem;
-    }
-    footer .contents ul li {
-        font-size: .8rem;
-        line-height: 1.5;
-    }
-}
-/*Media Query's Portrait End*/
-
-/*Media Query's Landscape Start*/
-@media screen and (max-width: 926px) and (orientation: landscape) {
-    nav ul {
-        font-size: .95rem;
-    }
-    .logo.container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-    }
+@media screen and (orientation: landscape) and (min-width: 653px ) {
     .logo.container img {
-        display: block;
-        margin: 0 auto;
-        position: relative;
-        width: 65%;
-    }
-    .logo.container h2 {
-        display: none;
-    }
-    .opening-times.container {
-        height: 33rem;
-    }
-    .content th,
-    .content td {
-        font-size: .85rem;
-    }
-    .content p {
-        width: 95%;
-        text-align: center;
-        font-size: .7rem;
-    }
-    .menu.container {
-        height: 50rem;
-    }
-    .menu-contents {
-        grid-template-columns: 1fr;
-        grid-gap: 1.5rem;
-        margin: 0 auto;
-    }
-    .menu-contents .menu-item h3 {
-        font-size: 1.35rem;
-    }
-    .menu-contents .menu-item p {
-        font-size: .85rem;
-        width: 90%;
-    }
-    .entertainment.container {
-        height: 33rem;
-    }
-    .entertainment-contents h3 {
-        font-size: 1.5rem;
-    }
-    .entertainment-contents p {
-        font-size: .85rem;
-    }
-    .gallery.container {
-        height: 35rem;
-    }
-    .carousel {
-        height: 100%;
-        width: 100%;
-        position: relative;
-        top: 2rem;
-    }
-    .carousel button {
-        font-size: 2rem;
-        top: 41%;
-    }
-    .carousel button.prev {
-        left: 3.7rem;
-    }
-    .carousel button.next {
-        right: 3.7rem;
-    }
-    .slide img {
-        object-fit: contain;
-        height: 100%;
-        width: 90%;
-    }
-    .slide figcaption {
-        left: 5.5%;
-    }
-    .staff.container {
-        height: 93rem;
-    }
-    .staff.container .staff-contents {
-        margin-top: 2rem;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr;
-        grid-gap: 1.5rem;
-    }
-    .staff-contents img {
-        width: 50%;
-    }
-    .staff-contents p {
-        width: 95%;
-    }
-    footer {
-        height: 10rem;
-        text-align: left;
-    }
-    footer .contents {
-        margin-left: 30%;
-    }
-    footer .contents ul li {
-        line-height: 1.7;
-    }
-}
-@media screen and (min-width: 928px) and (max-width: 1180px) and (orientation: landscape) {
-    nav ul {
-        font-size: 1.1rem;
-    }
-    .logo.container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
         height: 100vh;
     }
-    .logo.container h2 {
-        display: none;
-    }
-    .opening-times.container {
-        height: 35.5rem;
-    }
-    .opening-times p {
-        text-align: center;
-        width: 95%;
-        font-size: .85rem;
-    }
-    .menu.container {
-        height: 49rem;
-    }
-    .menu-contents {
-        grid-template-columns: 1fr;
-        grid-gap: 1.5rem;
-        margin: 0 auto;
-    }
-    .menu-contents .menu-item h3 {
-        font-size: 1.35rem;
-    }
-    .menu-contents .menu-item p {
-        font-size: .9rem;
-        width: 90%;
-    }
-    .entertainment.container {
-        height: 34rem;
-    }
-    .entertainment-contents h3 {
-        font-size: 1.5rem;
-    }
-    .entertainment-contents p {
-        font-size: .9rem;
-    }
-    .gallery.container {
-        height: 41rem;
-    }
-    .carousel {
-        height: 100%;
-        width: 100%;
-        position: relative;
-        margin: 0 auto;
-        top: 2rem;
-    }
-    .carousel button {
-        font-size: 2.5rem;
-        top: 41%;
-    }
-    .carousel button.prev {
-        left: 4rem;
-    }
-    .carousel button.next {
-        right: 4rem;
-    }
-    .slide figcaption {
-        left: 5.5%;
-    }
-    .slide img {
-        object-fit: contain;
-        height: 100%;
-        width: 90%;
-    }
-    .staff.container {
-        height: 98rem;
-    }
-    .staff.container .staff-contents {
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr;
-        grid-gap: 1rem;
-    }
-    .staff-contents img {
-        margin-top: 2rem;
-        width: 50%;
-    }
-    .staff-contents p {
-        width: 95%;
-    }
-    footer {
-        height: 10rem;
-    }
-    footer .contents ul li {
-        font-size: .8rem;
-        line-height: 1.5;
-    }
 }
-/*Media Query's Landscape End*/
+/*Media Query's End*/
